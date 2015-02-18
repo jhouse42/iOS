@@ -12,29 +12,30 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        if let token = User.currentUser().token {
-            
-            println(token)
-            
-        }else{
-            
-            User.currentUser().getUserToken()
-            
-            
-            
-        }
-        
-        
-        
-        
-        
-        
-        
+//        
+//        if let token = User.currentUser().token {
+//            
+//            println(token)
+//            
+//        }else{
+//            
+//            User.currentUser().getUserToken()
+//            
+//            
+//            
+//        }
+//        
+//        
+//        
+//        
+//        
+//        
+//        
+//    }
+    
+    
+    
+    
     }
-    
-    
-    
-    
 }
 

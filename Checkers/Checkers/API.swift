@@ -95,7 +95,8 @@ class User {
     class func currentUser() -> User { return _currentUser }
     
     
-    func getUserToken() {
+    
+    func getUserToken(username: String, password: String) {
     
         let options: [String:AnyObject] = [
             
@@ -103,7 +104,7 @@ class User {
         "method" : "POST",
         "body" : [
         
-            "user" : [ "email" : "macho_man_alanmatthews2@gmail.com", "password" : "nachooooescheese"]
+            "user" : [ "email" : username, "password" : password]
             
             
         ]
