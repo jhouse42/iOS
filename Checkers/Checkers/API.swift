@@ -8,9 +8,9 @@
 
 import Foundation
 
-//hiiiiiiiii
 
-let API_URL = "https://pure-anchorage-3070.herokuapp.com/"
+
+let API_URL = "https://warm-spire-6158.herokuapp.com/"
 
 
 
@@ -103,7 +103,7 @@ class User {
         "method" : "POST",
         "body" : [
         
-            "user" : [ "email" : "test@jgfhh.com", "password" : "pswd1634"]
+            "user" : [ "email" : "macho_man_alanmatthews2@gmail.com", "password" : "nachooooescheese"]
             
             
         ]
@@ -115,21 +115,21 @@ class User {
             
             println(responseInfo)
             
-            let dataInfo = responseInfo["data"] as [String:String]
-            self.token = dataInfo["auth_token"]
+            let dataInfo = responseInfo["user"] as [String:String]
+            self.token = dataInfo["token_auth"]
             
             
             // do something here after the request is done
             
         })
         
-         APIRequest.requestWithOptions(options, andCompletion: { (responseInfo) -> () in
+        // APIRequest.requestWithOptions(options, andCompletion: { (responseInfo) -> () in
             
             
             //do something else here
             
             
-        })
+        //})
     
     }
     

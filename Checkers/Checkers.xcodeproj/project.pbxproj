@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7043749B1A94C98000E0CF57 /* MatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7043749A1A94C98000E0CF57 /* MatchesTableViewController.swift */; };
+		704374A01A94CDFA00E0CF57 /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7043749F1A94CDFA00E0CF57 /* MatchData.swift */; };
+		704374A41A94CE8100E0CF57 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704374A31A94CE8100E0CF57 /* MatchCell.swift */; };
+		704374A61A94D00700E0CF57 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704374A51A94D00700E0CF57 /* LoginViewController.swift */; };
 		70BB59271A93F192004AEF4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB59261A93F192004AEF4D /* AppDelegate.swift */; };
 		70BB59291A93F192004AEF4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB59281A93F192004AEF4D /* ViewController.swift */; };
 		70BB592C1A93F192004AEF4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BB592A1A93F192004AEF4D /* Main.storyboard */; };
@@ -27,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7043749A1A94C98000E0CF57 /* MatchesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesTableViewController.swift; sourceTree = "<group>"; };
+		7043749F1A94CDFA00E0CF57 /* MatchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchData.swift; sourceTree = "<group>"; };
+		704374A31A94CE8100E0CF57 /* MatchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
+		704374A51A94D00700E0CF57 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		70BB59211A93F192004AEF4D /* Checkers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checkers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BB59251A93F192004AEF4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70BB59261A93F192004AEF4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +66,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7043749E1A94CD6800E0CF57 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				70BB59461A93F200004AEF4D /* API.swift */,
+				7043749F1A94CDFA00E0CF57 /* MatchData.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		70BB59181A93F192004AEF4D = {
 			isa = PBXGroup;
 			children = (
@@ -79,9 +96,12 @@
 		70BB59231A93F192004AEF4D /* Checkers */ = {
 			isa = PBXGroup;
 			children = (
-				70BB59461A93F200004AEF4D /* API.swift */,
+				7043749A1A94C98000E0CF57 /* MatchesTableViewController.swift */,
+				704374A31A94CE8100E0CF57 /* MatchCell.swift */,
 				70BB59281A93F192004AEF4D /* ViewController.swift */,
+				704374A51A94D00700E0CF57 /* LoginViewController.swift */,
 				70BB592A1A93F192004AEF4D /* Main.storyboard */,
+				7043749E1A94CD6800E0CF57 /* Models */,
 				70BB59241A93F192004AEF4D /* Supporting Files */,
 			);
 			path = Checkers;
@@ -215,9 +235,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704374A61A94D00700E0CF57 /* LoginViewController.swift in Sources */,
 				70BB59291A93F192004AEF4D /* ViewController.swift in Sources */,
 				70BB59471A93F200004AEF4D /* API.swift in Sources */,
+				7043749B1A94C98000E0CF57 /* MatchesTableViewController.swift in Sources */,
+				704374A41A94CE8100E0CF57 /* MatchCell.swift in Sources */,
 				70BB59271A93F192004AEF4D /* AppDelegate.swift in Sources */,
+				704374A01A94CDFA00E0CF57 /* MatchData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +433,7 @@
 				70BB59421A93F192004AEF4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70BB59431A93F192004AEF4D /* Build configuration list for PBXNativeTarget "CheckersTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +442,7 @@
 				70BB59451A93F192004AEF4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Checkers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -20,6 +21,113 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Matches Table View Controller-->
+        <scene sceneID="PUv-QR-eve">
+            <objects>
+                <tableViewController id="h2W-GQ-uXU" customClass="MatchesTableViewController" customModule="Checkers" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5mj-BL-m8C">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="sy4-z5-cSH" detailTextLabel="SpF-lt-w6V" style="IBUITableViewCellStyleValue2" id="zCC-yk-Da5" customClass="MatchCell" customModule="Checkers" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zCC-yk-Da5" id="XfJ-gY-xl7">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sy4-z5-cSH">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Score 0:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SpF-lt-w6V">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="h2W-GQ-uXU" id="VVS-je-h4v"/>
+                            <outlet property="delegate" destination="h2W-GQ-uXU" id="1oO-9C-2mo"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R0I-Wj-IlP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061" y="399"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="6d9-fb-QjB">
+            <objects>
+                <viewController id="jCR-Qu-1YY" customClass="LoginViewController" customModule="Checkers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xbe-Rp-Ap4"/>
+                        <viewControllerLayoutGuide type="bottom" id="0xh-D3-vPP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JvC-3k-Ciu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ri1-9x-A3Y">
+                                <rect key="frame" x="16" y="480" width="568" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tgC-Td-CG8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkv-Et-XXp">
+                                <rect key="frame" x="16" y="540" width="568" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="WrB-zH-Kto"/>
+                                </constraints>
+                                <state key="normal" title="Login / Register">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="jCR-Qu-1YY" eventType="touchUpInside" id="mmh-EF-1IY"/>
+                                    <action selector="loginRegister:" destination="jCR-Qu-1YY" eventType="touchUpInside" id="Zbc-Dh-pVd"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uyc-aI-yoh">
+                                <rect key="frame" x="16" y="420" width="568" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7ug-km-UqM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29891102330000002" green="0.74724706139999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ri1-9x-A3Y" firstAttribute="top" secondItem="uyc-aI-yoh" secondAttribute="bottom" constant="20" id="5yc-30-tVE"/>
+                            <constraint firstItem="Ri1-9x-A3Y" firstAttribute="trailing" secondItem="JvC-3k-Ciu" secondAttribute="trailingMargin" id="6UO-AA-akr"/>
+                            <constraint firstItem="0xh-D3-vPP" firstAttribute="top" secondItem="zkv-Et-XXp" secondAttribute="bottom" constant="20" id="KQq-s4-Xms"/>
+                            <constraint firstItem="uyc-aI-yoh" firstAttribute="leading" secondItem="JvC-3k-Ciu" secondAttribute="leadingMargin" id="L4S-bZ-HCr"/>
+                            <constraint firstItem="uyc-aI-yoh" firstAttribute="trailing" secondItem="JvC-3k-Ciu" secondAttribute="trailingMargin" id="NG1-Na-swt"/>
+                            <constraint firstItem="zkv-Et-XXp" firstAttribute="trailing" secondItem="JvC-3k-Ciu" secondAttribute="trailingMargin" id="ks9-j6-Wdt"/>
+                            <constraint firstItem="zkv-Et-XXp" firstAttribute="leading" secondItem="JvC-3k-Ciu" secondAttribute="leadingMargin" id="l3h-by-a2T"/>
+                            <constraint firstItem="zkv-Et-XXp" firstAttribute="top" secondItem="Ri1-9x-A3Y" secondAttribute="bottom" constant="20" id="y3L-UV-vmj"/>
+                            <constraint firstItem="Ri1-9x-A3Y" firstAttribute="leading" secondItem="JvC-3k-Ciu" secondAttribute="leadingMargin" id="yD3-aL-CyM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonBottomConstraint" destination="KQq-s4-Xms" id="rhS-Pq-RA4"/>
+                        <outlet property="passwordField" destination="Ri1-9x-A3Y" id="i3x-A0-eVk"/>
+                        <outlet property="usernameField" destination="uyc-aI-yoh" id="LUq-wh-Ee6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X5f-7l-q4q" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-248" y="399"/>
         </scene>
     </scenes>
 </document>
